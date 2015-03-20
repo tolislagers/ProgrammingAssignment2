@@ -1,4 +1,5 @@
-## Testing makeCacheMatrix
+## makeCacheMatrix stores a matrix in cache
+## Testing makeCacheMatrix and it's operation
 ## a <- matrix(1:4, 2, 2) -> this will be our testing square matrix
 ## Run the makeCacheMatrix function 
 ## cm <- makeCacheMatrix(a) -> to make all functions available via cm$
@@ -21,9 +22,15 @@ makeCacheMatrix <- function(x = matrix()) {
              getsolve = getsolve)
 }
 
-
-## Here will my comments be
-## Return a matrix that is the inverse of 'x'
+## cacheSolve displays the inverted/solved version of the matrix stored in makeCacheMatrix
+## cacheSolve can be tested by running the function and then
+## cacheSolve(cm)
+## It will return the solved value of a
+## try 
+## cm2 <- makeCacheMatrix(a)
+## followed by 
+## cacheSolve(cm2) 
+## to check for non-cached behaviour
 
 cacheSolve <- function(x, ...) {
         s <- x$getsolve()
